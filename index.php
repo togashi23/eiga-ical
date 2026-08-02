@@ -48,7 +48,6 @@ class EigaIcal
             curl_setopt_array($ch, $option);
             $response = curl_exec($ch);
             $errno = curl_errno($ch);
-            curl_close($ch);
             if (CURLE_OK !== $errno) {
                 throw new RuntimeException('cURL Error');
             }
