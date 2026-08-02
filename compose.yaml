@@ -1,0 +1,5 @@
+services:
+  eiga-ical:
+    build: .
+    ports:
+      - "10236:80"
