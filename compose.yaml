@@ -1,5 +1,11 @@
 services:
   eiga-ical:
     build: .
+    restart: unless-stopped
     ports:
       - "10236:80"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
